@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://texturepacker.com-->
+<!-- $TexturePacker:SmartUpdate:3e471a7e33ddeee941b82a090b0d1ce8$ -->
+<TextureAtlas imagePath="icon2.png">
+    <SubTexture name="patti_dt_bonus_btn" x="334" y="2" width="169" height="124"/>
+    <SubTexture name="patti_dt_dask_btn" x="2" y="128" width="375" height="120"/>
+    <SubTexture name="patti_dt_dk_1" x="2" y="35" width="330" height="56"/>
+    <SubTexture name="patti_dt_exp_1" x="248" y="2" width="31" height="31"/>
+    <SubTexture name="patti_dt_exp_2" x="2" y="2" width="244" height="16"/>
+    <SubTexture name="patti_dtbj_2_split" x="379" y="128" width="32" height="168"/>
+</TextureAtlas>

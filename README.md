@@ -8,21 +8,23 @@ A cracked old version can be download [here](https://download.csdn.net/download/
 
 ## Steps
 
-step1: down load unity's package:TexturePacker Importer to your project
-step2：what you should know
+Step1: Download unity's FREE package:[TexturePacker Importer](https://assetstore.unity.com/packages/tools/sprite-management/texturepacker-importer-16641) to your project.
 
-- pics will be packed to atlas should be put under folder ``Assets/Images/icon``
+Step2：What you should know
 
-- if you want set sprite's border,you should download ``2D Sprite`` by PackageManager,then you can editor your origin sprite.
+- Pics will be packed to atlas should be put under folder ``Assets/Images/icon``
 
-- atlas packed by TexturePacker was under folder ``Assets/SheetsByTP``, but it can not be used by Unity directly
+- If you want set sprite's border,you should download ``2D Sprite`` by PackageManager,then you can editor your origin sprite.
+
+- Atlas packed by TexturePacker was under folder ``Assets/SheetsByTP``, but it can not be used by Unity directly
 
 - The final can be used atlas was under folder "TexturePacker/icon"
 
-step3：this project provide auto tool to gen atlas,you can do by two operations from unity's menu area.
+Step3：This project provide auto tool to gen atlas,you can do by two operations from unity's menu area.
 
 - Tools/SpritesPacker/CommandTool
 - Tools/SpritesPacker/TexturePacker
+
 
 
 

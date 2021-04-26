@@ -1,0 +1,33 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.IO;
+using UnityEditor;
+using UnityEngine;
+
+namespace UnityTexturePackerTool
+{
+    [CreateAssetMenu(fileName = "SpriteConfig", menuName = "TexturePacker/SpriteConfig")]
+    public class SpriteConfig : ScriptableObject
+    {
+        public string filePath;
+        public string folderPath;
+        public string spriteName;
+        public int width = 512;
+        public int height = 512;
+        public int maxSize = 1024;
+
+        private void OnValidate()
+        {
+            int instanceId = this.GetInstanceID();
+            this.filePath = AssetDatabase.GetAssetPath(instanceId);
+            this.folderPath = new FileInfo(Application.dataPath.Replace("Assets", "") + this.filePath).Directory.FullName.Replace("\\","/");
+            this.folderPath = this.folderPath.Replace(Application.dataPath, "Assets");
+
+
+            if (string.IsNullOrEmpty(this.spriteName.Trim()))
+            {
+                Debug.LogError("error spriteName is empty,please check:" + this.filePath);
+            }
+        }
+    }
+}

@@ -14,7 +14,8 @@ public class CommandBuild : Editor
     public static void BuildTexturePacker()
     {
         //选择并设置TP命令行的参数和参数值(包括强制生成2048*2048的图集 --width 2048 --height 2048)
-        string commandText = " --sheet {0}.png --data {1}.xml --format sparrow --trim-mode None --pack-mode Best  --algorithm MaxRects --width 2048 --height 2048 --max-size 2048 --size-constraints POT  --disable-rotation --scale 1 {2}";
+        string commandText = " --sheet {0}.png --data {1}.xml --format sparrow --trim-mode None --pack-mode Best  --algorithm MaxRects --width 512 --height 512 --max-size 1024 --size-constraints POT  --disable-rotation --scale 1 {2}";
+
         string inputPath = string.Format("{0}/Images", Application.dataPath);//小图目录
         string outputPath = string.Format("{0}/TexturePacker", Application.dataPath);//用TP打包好的图集存放目录
         string[] imagePath = Directory.GetDirectories(inputPath);
