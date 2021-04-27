@@ -10,20 +10,19 @@ A cracked old version can be download [here](https://download.csdn.net/download/
 
 Step1: Download unity's FREE package:[TexturePacker Importer](https://assetstore.unity.com/packages/tools/sprite-management/texturepacker-importer-16641) to your project.
 
-Step2：What you should know
+Step2：
 
-- Pics will be packed to atlas should be put under folder ``Assets/Images/icon``
+- Move folder [UnityTexturePackerTool](https://github.com/iningwei/UnityTexturePackerTool/tree/master/Assets/UnityTexturePackerTool) to your project as Assets's sub dirctory
 
-- If you want set sprite's border,you should download ``2D Sprite`` by PackageManager,then you can editor your origin sprite.
+- File UnityTexturePackerTool/Resources/TexturePackerConfig.asset contains settings for origin textures、temp texturepacker output folder、final sprite output folder.Note all these settings should start with Assets.
+![](https://raw.githubusercontent.com/iningwei/SelfPictureHost/master/Blog/20210427120339.png)
+- Creat SpriteConfig.asset under your target folder where you want to build into sprite atlas.
+![](https://raw.githubusercontent.com/iningwei/SelfPictureHost/master/Blog/20210427120045.png)
+As pic shown the ``File Path`` and ``Folder Path`` are auto gen by code while validate.You can only set the ``Sprite Name``、``Width``、``Height``、``Max Size``
 
-- Atlas packed by TexturePacker was under folder ``Assets/SheetsByTP``, but it can not be used by Unity directly
 
-- The final can be used atlas was under folder "TexturePacker/icon"
+Step3：After you finished Step2.Use provided auto tool to gen atlas,you can do by one operation from unity's menu area:``TexturePackerTool->Build``
 
-Step3：This project provide auto tool to gen atlas,you can do by two operations from unity's menu area.
-
-- Tools/SpritesPacker/CommandTool
-- Tools/SpritesPacker/TexturePacker
 
 
 
