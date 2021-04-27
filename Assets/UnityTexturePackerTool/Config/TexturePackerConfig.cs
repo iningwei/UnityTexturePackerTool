@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
-
+#if UNITY_EDITOR
 namespace UnityTexturePackerTool
 {
     [CreateAssetMenu(fileName = "TexturePackerConfig", menuName = "TexturePacker/TexturePackerConfig")]
@@ -51,3 +51,4 @@ namespace UnityTexturePackerTool
 
     }
 }
+#endif

@@ -4,6 +4,7 @@ using System.IO;
 using UnityEditor;
 using UnityEngine;
 
+#if UNITY_EDITOR
 namespace UnityTexturePackerTool
 {
     [CreateAssetMenu(fileName = "SpriteConfig", menuName = "TexturePacker/SpriteConfig")]
@@ -20,7 +21,7 @@ namespace UnityTexturePackerTool
         {
             int instanceId = this.GetInstanceID();
             this.filePath = AssetDatabase.GetAssetPath(instanceId);
-            this.folderPath = new FileInfo(Application.dataPath.Replace("Assets", "") + this.filePath).Directory.FullName.Replace("\\","/");
+            this.folderPath = new FileInfo(Application.dataPath.Replace("Assets", "") + this.filePath).Directory.FullName.Replace("\\", "/");
             this.folderPath = this.folderPath.Replace(Application.dataPath, "Assets");
 
 
@@ -31,3 +32,4 @@ namespace UnityTexturePackerTool
         }
     }
 }
+#endif
