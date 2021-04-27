@@ -2,9 +2,12 @@ Easy workflow to pack texture to atlas,support sprite's border messages.
 
 
 ## TexturePacker
-It is a power tools,recommend you to support it use authorised edition [https://www.codeandweb.com/texturepacker](https://www.codeandweb.com/texturepacker)
+It is a power tools,recommend you to support it use authorised edition [https://www.codeandweb.com/texturepacker](https://www.codeandweb.com/texturepacker).
 
-A cracked old version can be download [here](https://download.csdn.net/download/iningwei/15137428)
+A cracked old version can be download [here](https://download.csdn.net/download/iningwei/15137428).
+
+TexturePacker provide commands to genarate sprite atlas.You can CD to the install folder,and use ``TexturePacker --help`` to get all the command paras.
+![](https://raw.githubusercontent.com/iningwei/SelfPictureHost/master/Blog/20210427180137.png)
 
 ## Steps
 
