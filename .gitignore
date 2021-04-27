@@ -7,3 +7,4 @@ Packages/
 Logs/
 Temp/
 *.meta
+.vsconfig
