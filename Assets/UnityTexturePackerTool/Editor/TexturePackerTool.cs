@@ -124,7 +124,7 @@ namespace UnityTexturePackerTool
 
             if (File.Exists(finalSpriteTextureFullPath))
             {
-                UnityEngine.Debug.LogError("delete first:" + finalSpriteTextureFullPath);
+                UnityEngine.Debug.Log("exist the same, delete:" + finalSpriteTextureFullPath);
                 File.Delete(finalSpriteTextureFullPath);
                 AssetDatabase.Refresh();//must refresh,otherwise file do not refresh
             }
