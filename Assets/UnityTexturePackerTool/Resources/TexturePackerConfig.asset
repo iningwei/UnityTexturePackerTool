@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a530c82f91bca34f85f70acdd7fe7cb, type: 3}
   m_Name: TexturePackerConfig
   m_EditorClassIdentifier: 
-  originTextureFoldersRoot: Assets/Images
-  tmpTexturePackerFileOutputFolder: Assets/SheetsByTP
-  spriteTextureOutputFolder: Assets/TexturePacker
-  spriteConfigs: []
+  originTextureFoldersRoot: Assets/UI
+  tmpTexturePackerFileOutputFolder: Assets/UnityTexturePackerTool/TMP_OUTPUT
+  spriteTextureOutputFolder: Assets/ArtResources/Sprite

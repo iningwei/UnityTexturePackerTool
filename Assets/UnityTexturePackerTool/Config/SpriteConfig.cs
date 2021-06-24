@@ -10,6 +10,7 @@ namespace UnityTexturePackerTool
     [CreateAssetMenu(fileName = "SpriteConfig", menuName = "TexturePacker/SpriteConfig")]
     public class SpriteConfig : ScriptableObject
     {
+        public bool enableBuild= true;
         public string filePath;
         public string folderPath;
         public string spriteName;

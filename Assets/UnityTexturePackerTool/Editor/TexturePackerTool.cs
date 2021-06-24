@@ -37,8 +37,13 @@ namespace UnityTexturePackerTool
                 string fileAssetsPath = spriteConfigFiles[i].Replace(Application.dataPath, "Assets");
                 var spriteConfig = AssetDatabase.LoadAssetAtPath<SpriteConfig>(fileAssetsPath);
 
-                BuildTexturePackerTmpFile(spriteConfig);
-                BuildFinalSpriteTexture(spriteConfig);
+                if (spriteConfig.enableBuild)
+                {
+                    UnityEngine.Debug.Log("----------------->build:" + spriteConfig.spriteName);
+                    BuildTexturePackerTmpFile(spriteConfig);
+                    BuildFinalSpriteTexture(spriteConfig);
+                }
+
             }
 
             AssetDatabase.Refresh();
@@ -88,20 +93,23 @@ namespace UnityTexturePackerTool
         static void BuildTexturePackerTmpFile(SpriteConfig spriteConfig)
         {
             string commandText = " --sheet {0}.png --data {1}.xml --format sparrow --trim-mode None --pack-mode Best  --algorithm MaxRects --width {2} --height {3} --max-size {4} --size-constraints POT  --disable-rotation --scale 1 {5}";
+
             string inputPath = Application.dataPath.Replace("Assets", "") + spriteConfig.folderPath;
 
             StringBuilder sb = new StringBuilder("");
             string[] fileName = Directory.GetFiles(inputPath);
             for (int j = 0; j < fileName.Length; j++)
             {
-                string extenstion = Path.GetExtension(fileName[j]);
+                var filePath = fileName[j].Replace("\\", "/");
+                string extenstion = Path.GetExtension(filePath);
                 //TODO:format restrict
                 if (extenstion == ".png")
                 {
-                    sb.Append(fileName[j]);
+                    UnityEngine.Debug.Log($"add png file [{j}]:" + filePath);
+                    sb.Append(filePath);
                     sb.Append("  ");
                 }
-                UnityEngine.Debug.Log($"fileName [{j}]:" + fileName[j]);
+
             }
 
 
