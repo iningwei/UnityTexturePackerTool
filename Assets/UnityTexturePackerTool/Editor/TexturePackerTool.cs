@@ -102,12 +102,22 @@ namespace UnityTexturePackerTool
             {
                 var filePath = fileName[j].Replace("\\", "/");
                 string extenstion = Path.GetExtension(filePath);
+                string name = Path.GetFileNameWithoutExtension(filePath);
+                if (spriteConfig.exceptions.Contains(name))
+                {
+                    UnityEngine.Debug.LogWarning("file:" + filePath + " ,was in exceptions, so it will not be packed!");
+                }
+
                 //TODO:format restrict
                 if (extenstion == ".png")
                 {
                     UnityEngine.Debug.Log($"add png file [{j}]:" + filePath);
                     sb.Append(filePath);
                     sb.Append("  ");
+                }
+                else
+                {
+                    UnityEngine.Debug.LogError($"file format not support:" + filePath);
                 }
 
             }

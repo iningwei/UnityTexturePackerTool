@@ -17,6 +17,8 @@ namespace UnityTexturePackerTool
         public int width = 512;
         public int height = 512;
         public int maxSize = 1024;
+        [Header("pics will not be packed into atlas")]
+        public List<string> exceptions;
 
         private void OnValidate()
         {
